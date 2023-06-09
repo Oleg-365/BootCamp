@@ -1,0 +1,15 @@
+C:\Users\79190\Desktop\control_version\Seminar_C#_morning\TEST1\Task\BootCamp\Konspekt\bin\Debug\net6.0\Konspekt.exe
+C:\Users\79190\Desktop\control_version\Seminar_C#_morning\TEST1\Task\BootCamp\Konspekt\bin\Debug\net6.0\Konspekt.deps.json
+C:\Users\79190\Desktop\control_version\Seminar_C#_morning\TEST1\Task\BootCamp\Konspekt\bin\Debug\net6.0\Konspekt.runtimeconfig.json
+C:\Users\79190\Desktop\control_version\Seminar_C#_morning\TEST1\Task\BootCamp\Konspekt\bin\Debug\net6.0\Konspekt.dll
+C:\Users\79190\Desktop\control_version\Seminar_C#_morning\TEST1\Task\BootCamp\Konspekt\bin\Debug\net6.0\Konspekt.pdb
+C:\Users\79190\Desktop\control_version\Seminar_C#_morning\TEST1\Task\BootCamp\Konspekt\obj\Debug\net6.0\Konspekt.csproj.AssemblyReference.cache
+C:\Users\79190\Desktop\control_version\Seminar_C#_morning\TEST1\Task\BootCamp\Konspekt\obj\Debug\net6.0\Konspekt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\79190\Desktop\control_version\Seminar_C#_morning\TEST1\Task\BootCamp\Konspekt\obj\Debug\net6.0\Konspekt.AssemblyInfoInputs.cache
+C:\Users\79190\Desktop\control_version\Seminar_C#_morning\TEST1\Task\BootCamp\Konspekt\obj\Debug\net6.0\Konspekt.AssemblyInfo.cs
+C:\Users\79190\Desktop\control_version\Seminar_C#_morning\TEST1\Task\BootCamp\Konspekt\obj\Debug\net6.0\Konspekt.csproj.CoreCompileInputs.cache
+C:\Users\79190\Desktop\control_version\Seminar_C#_morning\TEST1\Task\BootCamp\Konspekt\obj\Debug\net6.0\Konspekt.dll
+C:\Users\79190\Desktop\control_version\Seminar_C#_morning\TEST1\Task\BootCamp\Konspekt\obj\Debug\net6.0\refint\Konspekt.dll
+C:\Users\79190\Desktop\control_version\Seminar_C#_morning\TEST1\Task\BootCamp\Konspekt\obj\Debug\net6.0\Konspekt.pdb
+C:\Users\79190\Desktop\control_version\Seminar_C#_morning\TEST1\Task\BootCamp\Konspekt\obj\Debug\net6.0\Konspekt.genruntimeconfig.cache
+C:\Users\79190\Desktop\control_version\Seminar_C#_morning\TEST1\Task\BootCamp\Konspekt\obj\Debug\net6.0\ref\Konspekt.dll

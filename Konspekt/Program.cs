@@ -1,78 +1,65 @@
-﻿/*
-1. Константные(+)
-2. Логарифмические(бинарный поиск) O(log2(n)) (+)
-3. Линейные(+)
-4. Линейно-логарифмические(быстрая сортировка, сортировка слиянием) (+)
-5. Квадратные(сортировак пузырьком, сортировка выбором, сортировка вставками)
-6. Кубические
-7. Степенные (рекурсия)
-*/
+﻿// Быстрая Сортировка(QuickSort)
+// Стратегия "Разделяй и властвуй" 
 
 
-// Напишите программу, которая запрашивает у пользователя число(n). Необходимо сумму чисел от 1 до n.
-// Console.Clear();
-// Console.Write("Введите число: ");
-// int n = int.Parse(Console.ReadLine()!);
-// Console.WriteLine($"Результат: {((n + 1) / 2.0) * n}");
-// O(1)
+// [5, 2, 4, 3, 1]
+// [1, 2, 3, 4, 5]
 
-// int n = int.Parse(Console.ReadLine()!);
-// int n = Convert.ToInt32(Console.ReadLine());
-// int result = 0;
-// for (int i = 1; i <= n; i++)
-//     result = result + i;
-// Console.WriteLine($"Результат: {result}");
-// O(n)
+// [] or [57]
+// [5, 3] - [3, 5]
+
+// [2, 3, 1]
+// [2] - опорный элемент
+// [1] + [2] + [3]
+
+// [3, 4, 1, 2]
+// [3] - опорный элемент
+// [1, 2] + [3] + [4]
+//  |
+// [1] - опорный элемент
+// [] + [1] + [2]
 
 
-// void InputArray(int[] array)
-// {
-//     for (int i = 0; i < array.Length; i++)
-//         array[i] = new Random().Next(1, 101); // [1, 100]
-// }
-
-// void SortArray(int[] array)
-// {
-//     for (int i = 0; i < array.Length; i++)
-//     {
-//         for (int j = 0; j < array.Length - 1; j++)
-//         {
-//             if (array[j] > array[j + 1])
-//             {
-//                 int temp = array[j];
-//                 array[j] = array[j + 1];
-//                 array[j + 1] = temp;
-//             }
-//         }
-//     }
-// }
-
-// Console.Clear();
-// Console.Write("Введите кол-во элементов массива: ");
-// int n = int.Parse(Console.ReadLine()!);
-// int[] array = new int[n];
-// InputArray(array);
-// Console.WriteLine($"Начальный массив: [{string.Join(", ", array)}]");
-// SortArray(array);
-// Console.WriteLine($"Конечный массив: [{string.Join(", ", array)}]");
-// O(n^2)
-
-int[] array = new int[5];
-int[,] array2D = new int[5, 5];
-int[,,] array3D = new int[5, 5, 5];
-int count = 0;
-for (int i = 0; i < array3D.GetLength(0); i++)
+int Partition(int[] array, int start, int end) // [1, 2, 4, 5, 3] 2 4
 {
-    for (int j = 0; j < array3D.GetLength(1); j++)
+    int marker = start; // Индекс опорного элемента 2
+    for (int i = start; i < end; i++)
     {
-        for (int k = 0; k < array3D.GetLength(2); k++)
+        if (array[i] < array[end])
         {
-            array3D[i, j, k] = count;
-            count++;
-            Console.WriteLine($"{array3D[i, j, k]} ({i}, {j}, {k})");
+            (array[marker], array[i]) = (array[i], array[marker]);
+            marker++;
         }
     }
+    // Перемещение array[end] между левым и правым подмассивами
+    (array[marker], array[end]) = (array[end], array[marker]);
+    // [1, 2, 3, 4, 5]
+    // maker = 2
+    Console.WriteLine($"[{string.Join(", ", array)}]");
+    return marker;
 }
-// O(n^3)
-// https://www.notion.so/C-6e505408d2574e518ebef95f794d2769
-// Коды могут отличаться между тем, что было на семинаре и в ноушене 
+
+
+void Quicksort(int[] array, int start, int end) // [5, 3, 4, 1, 2] 0 4
+{
+    if (start >= end)
+        return;
+    
+    int pivot = Partition(array, start, end); // 2
+    Quicksort(array, start, pivot - 1); // [1, 2, 3, 4, 5] 2 1
+    Quicksort(array, pivot + 1, end); // [1, 2, 3, 4, 5] 3 4
+}
+
+
+Console.Clear();
+Console.Write("Введите кол-во элементов: ");
+int n = int.Parse(Console.ReadLine()!);
+int[] array = new int[n]; 
+for (int i = 0; i < array.Length; i++)
+    array[i] = new Random().Next(1, 101); // [1; 100]
+Console.WriteLine($"Начальный массив: [{string.Join(", ", array)}]");
+Quicksort(array, 0, array.Length - 1); // [5, 3, 4, 1, 2] 0 4
+Console.WriteLine($"Конечный массив: [{string.Join(", ", array)}]");
+
+// Сортировка пузырьком, выбором, вставками O(n^2)
+// Быстрая сортировка O(n * log2(n))
