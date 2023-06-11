@@ -2,8 +2,11 @@
     color: aqua;
 }
 html{
-    background-color: rgb(180, 197, 159);
+    background-color: skyblue;
 }
 .list{
     background-color: blue;
+}
+a{
+    color: green;
 }
